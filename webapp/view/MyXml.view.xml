@@ -1,0 +1,19 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="mickey.controller.Main" xmlns:l="sap.ui.layout.form">
+    <l:SimpleForm  id="idForm" editable="true" layout="ResponsiveGridLayout"  >
+          <l:content>
+                <Label text="Emp Id " />
+                <Input width="20%"  id="idEmpId" />
+                <Label text="Emp Name " /> 
+                <Input width="35%" id="idEmpName" />
+                <Label text="Emp Age " />
+                <Input width="20%" id="idEmpAge" />
+                <Label text="Emp Salary " />
+                <Input width="25%" id="idEmpSal" />
+                <Label text="Currency " />
+                <Input width="25%" id="idEmpCurr" />
+                <Label text="Smoker " />
+                <CheckBox id="idSmoker"></CheckBox>
+                <Button width="25%" text="click xml button" press="onSubmit" />
+          </l:content>
+    </l:SimpleForm>
+</mvc:View>
