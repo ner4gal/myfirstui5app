@@ -11,8 +11,50 @@ sap.ui.define(
                                 onInit: function() {
                                     // Initialize your global variable
                                     this.oMyview = this.getView();
+                                        //Step 1: Create brand new model object 
+                                        var oModel = new sap.ui.model.json.JSONModel();
+                                        //Step 2: set the data in model object
+                                        oModel.setData({
+
+                                                empStr: {
+                                                        empId: "E101",
+                                                        empName: "Mickey",
+                                                        empAge: 30,
+                                                        empSal: 10000,
+                                                        empCurr: "USD",
+                                                        smoker: true
+                                                },
+                                                empArr: [
+                                                        {
+                                                                empId: "E101",
+                                                                empName: "Mickey",
+                                                                empAge: 30,
+                                                                empSal: 10000,
+                                                                empCurr: "USD",
+                                                                smoker: false
+                                                        },
+                                                        {
+                                                                empId: "E102",
+                                                                empName: "Donald",
+                                                                empAge: 40,
+                                                                empSal: 20000,
+                                                                empCurr: "INR",
+                                                                smoker: false
+                                                        },
+                                                        {
+                                                                empId: "E103",
+                                                                empName: "Goofy",
+                                                                empAge: 50,
+                                                                empSal: 30000,
+                                                                empCurr: "EUR",
+                                                                smoker: true
+                                                        }
+                                                ]
+                                            
+                                        });
+                                        sap.ui.getCore().setModel(oModel);
+
                                  },
-                            
                                 //This is the standard function which every controller will have
                                 myCode:function(){
                                        var oInp = sap.ui.getCore().byId("idInp");

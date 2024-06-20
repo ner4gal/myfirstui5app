@@ -2,17 +2,17 @@
     <l:SimpleForm  id="idForm" editable="true" layout="ResponsiveGridLayout"  >
           <l:content>
                 <Label text="Emp Id " />
-                <Input width="20%"  id="idEmpId" />
+                <Input width="20%"  id="idEmpId" value="{/empArr/0/empId}" />
                 <Label text="Emp Name " /> 
-                <Input width="35%" id="idEmpName" />
+                <Input width="35%" id="idEmpName" value="{/empArr/0/empName}" />
                 <Label text="Emp Age " />
-                <Input width="20%" id="idEmpAge" />
+                <Input width="20%" id="idEmpAge" value="{/empArr/0/empAge}" />
                 <Label text="Emp Salary " />
-                <Input width="25%" id="idEmpSal" />
+                <Input width="25%" id="idEmpSal" value="{/empArr/0/empSal}"/>
                 <Label text="Currency " />
-                <Input width="25%" id="idEmpCurr" />
+                <Input width="25%" id="idEmpCurr" value="{/empArr/0/empCurr}" />
                 <Label text="Smoker " />
-                <CheckBox id="idSmoker"></CheckBox>
+                <CheckBox id="idSmoker" selected="{/empArr/0/smoker}"></CheckBox>
                 <Button width="25%" text="click xml button" press="onSubmit" />
           </l:content>
     </l:SimpleForm>
